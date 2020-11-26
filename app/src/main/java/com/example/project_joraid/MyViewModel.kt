@@ -22,9 +22,13 @@ class MyViewModel(app : Application) : AndroidViewModel(app) {
 
     var loginIsValid = MutableLiveData<String>()
 
+    init {
+        loginIsValid.value = "valid"
+    }
     suspend fun loadData(url: String): String{
         var ins: InputStream? = null
         var result = ""
+
 
         try{
             var url = URL(url)
@@ -49,16 +53,12 @@ class MyViewModel(app : Application) : AndroidViewModel(app) {
 
                 var isValidLogin = json.optString("login")
 
-                updateInfo(isValidLogin)
+                this@MyViewModel.loginIsValid.value = isValidLogin
                 Toast.makeText(getApplication(), isValidLogin, Toast.LENGTH_LONG).show()
 
 
             }
         }
-    }
-
-    fun updateInfo(login:String){
-        this.loginIsValid.value = login
     }
 
     fun getJson(jsonStr: String): JSONObject{
