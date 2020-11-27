@@ -41,7 +41,9 @@ class MainScreen : AppCompatActivity() {
     fun submitBtnEvent(view: View) {
         when (userAction) {
             "new" -> {
-                return
+                var newRecIntent = Intent(this, NewRecord::class.java)
+                startActivity(newRecIntent)
+
             }
             "previous" -> {
                 return

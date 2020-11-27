@@ -11,4 +11,13 @@
     <string name="log_out">Log out</string>
     <string name="submit">Submit</string>
     <string name="adnan_joraid_991581388">Adnan Joraid - 991581388</string>
+    <string name="new_record">New Record</string>
+    <string name="student_id">Student ID</string>
+    <string name="score">Score</string>
+    <string name="_10">10</string>
+    <string name="_5">5</string>
+    <string name="_0">0</string>
+    <string name="comments">Comments</string>
+    <string name="save_record">Save Record</string>
+    <string name="back">Back</string>
 </resources>
