@@ -13,7 +13,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="68dp"
         android:layout_marginEnd="16dp"
-        android:text="Hello, "
+        android:text="@string/hello"
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,7 +28,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="44dp"
         android:layout_marginEnd="16dp"
-        android:text="Please select an option"
+        android:text="@string/please_select_an_option"
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -53,7 +53,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginVertical="20dp"
-            android:text="Enter a new record"
+            android:text="@string/enter_a_new_record"
             android:textSize="18sp" />
 
         <RadioButton
@@ -61,7 +61,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginVertical="20dp"
-            android:text="Display previous records"
+            android:text="@string/display_previous_records"
             android:textSize="18sp" />
 
         <RadioButton
@@ -69,7 +69,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginVertical="20dp"
-            android:text="Log out"
+            android:text="@string/log_out"
             android:textSize="18sp" />
     </RadioGroup>
 
@@ -80,7 +80,8 @@
         android:layout_marginTop="36dp"
         android:width="220dp"
         android:background="#673AB7"
-        android:text="Submit"
+        android:text="@string/submit"
+        android:onClick="submitBtnEvent"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"

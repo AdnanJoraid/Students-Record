@@ -4,4 +4,12 @@
     <string name="user_name">User Name</string>
     <string name="password">Password</string>
     <string name="keep_me_logged_in">Keep me logged in</string>
+    <string name="hello">Hello,</string>
+    <string name="please_select_an_option">Please select an option</string>
+    <string name="enter_a_new_record">Enter a new record</string>
+    <string name="display_previous_records">Display previous records</string>
+    <string name="log_out">Log out</string>
+    <string name="submit">Submit</string>
+    <string name="login">Login</string>
+    <string name="adnan_joraid_991581388">Adnan Joraid - 991581388</string>
 </resources>
