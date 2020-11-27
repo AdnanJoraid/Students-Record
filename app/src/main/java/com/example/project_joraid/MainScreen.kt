@@ -8,6 +8,7 @@ import kotlinx.android.synthetic.main.activity_main_screen.*
 
 class MainScreen : AppCompatActivity() {
     val myPrefs = "PrefsFile"
+    var userAction = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_screen)
@@ -15,14 +16,43 @@ class MainScreen : AppCompatActivity() {
         var username = mySharedPref.getString("username", "")
         var isChecked = mySharedPref.getBoolean("rememberMe", false)
         if (isChecked){
-            tvWelcomeMsg.setText("Hello, $username")
+            tvWelcomeMsg.text = "Hello, $username"
         }else {
             var name = intent.getSerializableExtra("username") as String
-            tvWelcomeMsg.setText("Hello, $name")
+            tvWelcomeMsg.text = "Hello, $name"
         }
 
     }
 
-    fun submitBtnEvent(view: View) {}
+    fun userSelection(view: View) {
+        when (view.id){
+            R.id.rbNewRecord ->{
+                userAction = "new"
+            }
+            R.id.rbPreviousRecord ->{
+                userAction = "previous"
+            }
+            R.id.rbLogout ->{
+                userAction = "logout"
+            }
+        }
+    }
+
+    fun submitBtnEvent(view: View) {
+        when (userAction) {
+            "new" -> {
+                return
+            }
+            "previous" -> {
+                return
+            }
+            "logout" -> {
+                var i = Intent(this, MainActivity::class.java)
+                startActivity(i)
+                finish()
+            }
+        }
+    }
+
 
 }

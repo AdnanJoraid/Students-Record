@@ -19,7 +19,6 @@ import kotlin.concurrent.thread
 class MainActivity : AppCompatActivity() {
     lateinit var vm: MyViewModel
     val myPrefs = "PrefsFile"
-
     var keepMeLoggedIn: Boolean = false
 
 
@@ -36,11 +35,7 @@ class MainActivity : AppCompatActivity() {
             etPassword.setText(permPassword)
             cbRememberMe.isChecked = true
        }
-
-
-
     }
-
      fun loginBtnEvent(view: View) {
         //all the login functionally will be inside this function
         var intentMainScreen = Intent(this, MainScreen::class.java)

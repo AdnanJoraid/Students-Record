@@ -49,26 +49,29 @@
         app:layout_constraintTop_toBottomOf="@+id/textView4">
 
         <RadioButton
-            android:id="@+id/radioButton"
+            android:id="@+id/rbNewRecord"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginVertical="20dp"
             android:text="@string/enter_a_new_record"
+            android:onClick="userSelection"
             android:textSize="18sp" />
 
         <RadioButton
-            android:id="@+id/radioButton2"
+            android:id="@+id/rbPreviousRecord"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginVertical="20dp"
             android:text="@string/display_previous_records"
+            android:onClick="userSelection"
             android:textSize="18sp" />
 
         <RadioButton
-            android:id="@+id/radioButton3"
+            android:id="@+id/rbLogout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginVertical="20dp"
+            android:onClick="userSelection"
             android:text="@string/log_out"
             android:textSize="18sp" />
     </RadioGroup>
