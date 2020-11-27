@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AllRecord"></activity>
+        <activity android:name=".ModifyRecord"></activity>
+        <activity android:name=".AllRecord" />
         <activity android:name=".NewRecord" />
         <activity android:name=".MainScreen" />
         <activity android:name=".MainActivity">

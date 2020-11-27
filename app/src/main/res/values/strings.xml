@@ -14,7 +14,7 @@
     <string name="new_record">New Record</string>
     <string name="student_id">Student ID</string>
     <string name="score">Score</string>
-    <string name="_10">10</string>
+    <string name="_11">10</string>
     <string name="_5">5</string>
     <string name="_0">0</string>
     <string name="comments">Comments</string>
@@ -28,4 +28,12 @@
     <string name="_345">345</string>
     <string name="_10">10</string>
     <string name="very_good">Very Good</string>
+    <string name="edit_record">Edit Record</string>
+    <string name="student_id_update">Student ID:</string>
+    <string name="score_update">Score</string>
+    <string name="enter_score">Enter Score</string>
+    <string name="enter_comment">Enter Comment</string>
+    <string name="cancel">Cancel</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
 </resources>
