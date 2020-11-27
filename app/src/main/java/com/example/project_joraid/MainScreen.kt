@@ -46,7 +46,8 @@ class MainScreen : AppCompatActivity() {
 
             }
             "previous" -> {
-                return
+                var prevRecIntent = Intent(this, AllRecord::class.java)
+                startActivity(prevRecIntent)
             }
             "logout" -> {
                 var i = Intent(this, MainActivity::class.java)

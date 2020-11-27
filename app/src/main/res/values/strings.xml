@@ -20,4 +20,9 @@
     <string name="comments">Comments</string>
     <string name="save_record">Save Record</string>
     <string name="back">Back</string>
+    <string name="all_records">All Records</string>
+    <string name="id">ID</string>
+    <string name="scoreVal">Score</string>
+    <string name="comment">Comment</string>
+    <string name="main_page">main page</string>
 </resources>
