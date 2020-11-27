@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
 
         var username = etUserName.text.toString()
         var password = etPassword.text.toString()
-        var rememberMe = cbRememberMe.isChecked.toString()
+         var rememberMe = cbRememberMe.isChecked.toString()
          val sharedPref = getSharedPreferences(myPrefs, MODE_PRIVATE)
          val editor = sharedPref.edit()
          var url = "https://mohameom.dev.fast.sheridanc.on.ca/login/verify.php?name=${username}&password=${password}"
