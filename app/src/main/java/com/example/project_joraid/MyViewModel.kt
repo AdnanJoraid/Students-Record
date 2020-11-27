@@ -23,7 +23,7 @@ class MyViewModel(app : Application) : AndroidViewModel(app) {
     var loginIsValid = MutableLiveData<String>()
 
     init {
-        loginIsValid.value = "valid"
+        loginIsValid.value = ""
     }
     suspend fun loadData(url: String): String{
         var ins: InputStream? = null
@@ -54,9 +54,6 @@ class MyViewModel(app : Application) : AndroidViewModel(app) {
                 var isValidLogin = json.optString("login")
 
                 this@MyViewModel.loginIsValid.value = isValidLogin
-                Toast.makeText(getApplication(), isValidLogin, Toast.LENGTH_LONG).show()
-
-
             }
         }
     }
