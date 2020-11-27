@@ -10,6 +10,8 @@ class AllRecord : AppCompatActivity() {
         setContentView(R.layout.activity_all_record)
     }
 
+
+
     fun mainPageBtn(view: View) {
         finish()
     }

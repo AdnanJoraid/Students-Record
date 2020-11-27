@@ -38,9 +38,11 @@ class NewRecord : AppCompatActivity() {
 
     fun saveRecord(view: View) {
         try{
+
             var studentId = etStudentId.text.toString()
             var score = scorePlaceHolder
             var comments = etComments.text.toString()
+            if(studentId.isEmpty() && comments.isEmpty()) { Toast.makeText(this, "Please enter valid information", Toast.LENGTH_SHORT).show()}
             if (studentId.isNotEmpty() && comments.isNotEmpty()){
                 var record = Record(studentId, score, comments)
 
@@ -53,16 +55,11 @@ class NewRecord : AppCompatActivity() {
                 }.start()
 
             }
-            Toast.makeText(this, "Please enter valid information", Toast.LENGTH_SHORT).show()
+
 
         } catch (e: Exception){
             Toast.makeText(this, "Please enter valid information", Toast.LENGTH_SHORT).show()
         }
-
-
-        //create a connection to a database and add the above information to it (if the values are not empty)
-
-
 
     }
     fun goBack(view: View) {
