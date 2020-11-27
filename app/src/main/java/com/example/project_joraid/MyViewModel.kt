@@ -20,11 +20,41 @@ import kotlin.math.log
 
 class MyViewModel(app : Application) : AndroidViewModel(app) {
 
+    lateinit var records: MutableLiveData<List<Record>>
     var loginIsValid = MutableLiveData<String>()
 
     init {
         loginIsValid.value = ""
+
+        records = MutableLiveData<List<Record>>()
+        getRecords()
     }
+
+    fun getRecords(){
+        val db = MyDatabase.getDatabase(getApplication())
+
+        if (db != null){
+            val list = db.recordDao().getAll()
+
+            records.value = list
+        }
+    }
+
+    fun addRecords(record: Record){
+        val recordDao = MyDatabase.getDatabase(getApplication())?.recordDao()
+        recordDao?.insertAll(record)
+    }
+
+    fun deleteRecords(record: Record){
+        val recordDao = MyDatabase.getDatabase(getApplication())?.recordDao()
+        recordDao?.deleteRecord(record)
+    }
+
+    fun updateRecord(record: Record){
+        val recordDao = MyDatabase.getDatabase(getApplication())?.recordDao()
+        recordDao?.updateRecord(record)
+    }
+
     suspend fun loadData(url: String): String{
         var ins: InputStream? = null
         var result = ""
