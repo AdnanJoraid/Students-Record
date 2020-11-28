@@ -7,7 +7,9 @@ import android.widget.SeekBar
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import kotlinx.android.synthetic.main.activity_new_record.*
+import kotlinx.coroutines.delay
 import java.lang.Exception
+import kotlin.concurrent.thread
 
 class NewRecord : AppCompatActivity() {
     lateinit var scorePlaceHolder: String
@@ -51,6 +53,7 @@ class NewRecord : AppCompatActivity() {
                     runOnUiThread{
                         etStudentId.text.clear()
                         etComments.text.clear()
+                        Toast.makeText(this, "Information is added!", Toast.LENGTH_LONG).show()
                     }
                 }.start()
 

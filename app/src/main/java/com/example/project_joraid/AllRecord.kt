@@ -34,7 +34,8 @@ class AllRecord : AppCompatActivity(), MyAdapter.OnItemClickListener {
 
 
     fun mainPageBtn(view: View) {
-        finish()
+        var i = Intent(this, MainScreen::class.java)
+        startActivity(i)
     }
 
     override fun onItemClick(position: Int) {
