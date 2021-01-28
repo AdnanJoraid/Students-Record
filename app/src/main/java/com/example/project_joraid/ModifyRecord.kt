@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
 import android.view.View
+import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import kotlinx.android.synthetic.main.activity_modify_record.*
 
@@ -28,7 +29,7 @@ class ModifyRecord : AppCompatActivity() {
     }
 
     fun cancelBtn(view: View) {
-        var i = Intent(this, MainScreen::class.java)
+        var i = Intent(this, AllRecord::class.java)
         startActivity(i)
     }
     fun updateData(view: View) {
@@ -36,13 +37,14 @@ class ModifyRecord : AppCompatActivity() {
         var updatedScore = etUpdateScore.text.toString()
         var updatedComment = etUpdateComment.text.toString()
 
-        if (inputCheck(updatedScore, updatedComment)){
+        if (inputCheck(updatedScore, updatedComment) && (updatedScore < "11" && updatedScore < "0")){
             val updatedRecord = Record(id, updatedScore, updatedComment)
             vm?.updateRecord(updatedRecord)
             var i = Intent(this, AllRecord::class.java)
             startActivity(i)
 
         }
+        Toast.makeText(this, "Please enter valid information.\nHint: the score should be >= 0 and < 11", Toast.LENGTH_SHORT).show()
 
     }
     fun deleteData(view: View) {
